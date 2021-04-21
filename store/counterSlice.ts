@@ -16,7 +16,7 @@ const initialState: CounterState = {
 export const incrementAsync = createAsyncThunk(
     'counter/fetchCount',
     async (amount: number) => {
-        const response = await fetchCount()
+        const response = await fetchCount(amount)
         return response.data
     }
 )

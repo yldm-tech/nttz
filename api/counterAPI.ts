@@ -1,3 +1,3 @@
-export async function fetchCount(): Promise<{ data: number }> {
-    return {data: 1};
+export async function fetchCount(amount: number = 1): Promise<{ data: number }> {
+    return {data: amount};
 }
