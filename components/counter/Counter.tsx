@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { useAppSelector, useAppDispatch } from '../../App'
+import { useAppSelector, useAppDispatch } from '../../hook'
 import {
     decrement,
     increment,
