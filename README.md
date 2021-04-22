@@ -22,3 +22,7 @@
 5. 集成了redux(redux-toolkit)
 6. 自带了一个counter示例
 7. 封装了axios，添加了拦截器
+
+
+#### preview
+![](public/images/img.png)
