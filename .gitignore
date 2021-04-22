@@ -39,3 +39,6 @@ yarn-error.log*
 # pwa
 workbox*.js
 sw.js
+# Local Netlify folder
+.netlify
+*.js.map
