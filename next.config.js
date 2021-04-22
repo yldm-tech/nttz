@@ -6,6 +6,11 @@ module.exports = withPWA({
     future: {
         webpack5: true,
     },
+    webpack: (config) => {
+        config.resolve.alias['@'] = path.resolve(__dirname);
+        config.resolve.alias['@@'] = path.resolve(__dirname, './components');
+        return config;
+    },
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },

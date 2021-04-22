@@ -29,7 +29,7 @@
 ├── components             自定义组件
 ├── pages                  页面（自动生成路由）
 ├── public                 放置静态文件，自动映射到根目录
-├── store                  状态管理(store和slice)
+├── index                  状态管理(store和slice)
 ├── styles                 需要打包编译的文件,如scss
 ├── utils                  通用方法
 ├── hook.ts                RTK的API
