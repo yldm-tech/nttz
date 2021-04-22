@@ -3,7 +3,7 @@ const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
 module.exports = withPWA({
-    distDir:'out',
+    distDir: 'out',
     future: {
         webpack5: true,
     },
