@@ -33,4 +33,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# jetbrains
 .idea
+
+# pwa
+workbox*.js
+sw.js

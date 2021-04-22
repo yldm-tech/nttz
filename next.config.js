@@ -1,9 +1,16 @@
 const path = require('path')
-module.exports = {
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
+
+module.exports = withPWA({
     future: {
         webpack5: true,
     },
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },
-}
+    pwa: {
+        dest: 'public',
+        runtimeCaching,
+    },
+})
