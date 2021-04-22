@@ -15,10 +15,10 @@ const IndexPage: NextPage = () => {
                 <img src="/logo.svg" className={styles.logo} alt="logo"/>
                 <Counter/>
                 <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
+                    编辑 <code>pages/_app.tsx</code> 保存并查看.
                 </p>
                 <span>
-          <span>Learn </span>
+          <span>学习 </span>
           <a
               className={styles.link}
               href="https://reactjs.org/"
@@ -45,7 +45,7 @@ const IndexPage: NextPage = () => {
           >
             Redux Toolkit
           </a>
-          ,<span> and </span>
+          ,<span> 和 </span>
           <a
               className={styles.link}
               href="https://react-redux.js.org/"

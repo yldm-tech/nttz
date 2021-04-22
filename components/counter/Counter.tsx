@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { useAppSelector, useAppDispatch } from '../../hook'
+import { useAppSelector, useAppDispatch } from '@/hook'
 import {
     decrement,
     increment,
@@ -8,7 +8,7 @@ import {
     incrementAsync,
     incrementIfOdd,
     selectCount,
-} from '../../store/counterSlice'
+} from '@/store/counterSlice'
 import styles from './Counter.module.css'
 
 function Counter() {
@@ -48,19 +48,19 @@ function Counter() {
                     className={styles.button}
                     onClick={() => dispatch(incrementByAmount(incrementValue))}
                 >
-                    Add Amount
+                    加{incrementAmount}
                 </button>
                 <button
                     className={styles.asyncButton}
                     onClick={() => dispatch(incrementAsync(incrementValue))}
                 >
-                    Add Async
+                    异步加1
                 </button>
                 <button
                     className={styles.button}
                     onClick={() => dispatch(incrementIfOdd(incrementValue))}
                 >
-                    Add If Odd
+                    基数加1
                 </button>
             </div>
         </div>
