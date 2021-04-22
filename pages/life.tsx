@@ -5,7 +5,6 @@ interface Props {
     userAgent?: string;
 }
 
-// 绿色:仅客户端    黄色：都执行     红色：仅服务器
 // 生命周期示例，顺便打了下userAgent,重点关注浏览器console和IDE的console内容
 export default class extends Component<Props> {
     static async getInitialProps({req}: NextPageContext) {   //s1
