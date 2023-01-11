@@ -8,7 +8,7 @@
 `yarn dev`
 
 #### 打开浏览器输入
-`http://localhost:3000`
+`http://localhost:5000`
 
 #### 部署
 `yarn build`    
@@ -16,7 +16,7 @@
 
 #### 特性
 1. 支持typescript
-2. 集成sass
+2. 集成tailwind
 3. 支持dotenv
 4. 支持pwa
 5. 集成了redux(redux-toolkit)

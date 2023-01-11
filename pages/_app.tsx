@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css';
+import '@/styles/globals.css';
 import Head from 'next/head'
 import { Provider } from 'react-redux'
 import type { AppProps } from 'next/app'

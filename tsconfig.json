@@ -28,7 +28,8 @@
       "@@/*": [
         "./components/*"
       ]
-    }
+    },
+    "incremental": true
   },
   "exclude": [
     "node_modules"
