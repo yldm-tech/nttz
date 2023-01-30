@@ -13,8 +13,8 @@ module.exports = withPWA({
         config.resolve.alias['@@'] = path.resolve(__dirname, './components');
         return config;
     },
-    pwa: {
-        dest: 'public',
-        runtimeCaching,
-    },
+    // pwa: {
+    //     dest: 'public',
+    //     runtimeCaching,
+    // },
 })
