@@ -1,22 +1,26 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import { create } from 'zustand'
 
-import counterReducer from '@/store/counterSlice'
-
-export function makeStore() {
-    return configureStore({
-        reducer: {counter: counterReducer},
-    })
+type State = {
+  count: number
 }
 
-const index = makeStore()
+type Actions = {
+  increment: () => void
+  decrement: () => void
+  incrementAsync: (count: number) => Promise<void>
+  incrementIfOdd: (count: number) => void
+}
 
-export type AppState = ReturnType<typeof index.getState>
-
-export type AppDispatch = typeof index.dispatch
-
-export type AppThunk<ReturnType = void> = ThunkAction<ReturnType,
-    AppState,
-    unknown,
-    Action<string>>
-
-export default index
+export const useCountStore = create<State & Actions>((set) => ({
+  count: 0,
+  increment: () => set((state) => ({ count: state.count + 1 })),
+  decrement: () => set((state) => ({ count: state.count - 1 })),
+  incrementAmount: (count: number) => set((state) => ({ count: state.count + count })),
+  incrementAsync: async (count: number) =>{
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+    set((state) => ({ count: state.count + count }))
+  },
+  incrementIfOdd: (count: number) => {
+    set((state) => ({ count: state.count % 2 === 0 ? state.count : state.count + count }))
+  },
+}))
